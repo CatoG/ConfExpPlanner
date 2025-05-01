@@ -86,7 +86,7 @@ const getItemsFromTotalCost = () => {
         return <>
             <div className="display_box1">
                 {items.length === 0 && <p>No items selected</p>}
-                <table className="table_item_data">
+                <table className="table_item_data" border="1">
                     <thead>
                         <tr>
                             <th>Name</th>
