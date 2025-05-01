@@ -11,6 +11,7 @@
     border-radius: 10px;
     margin-left: -180px;
     font-size: 24px;
+    font-weight: bold;
   }
   
   .venue_selection,.addons_selection , .meal_selection {
@@ -35,7 +36,7 @@
   }
   .text h1{
     width: 900px;
-    font-size: 40px;
+    font-size: 30px;
     background-color: #133b6a;
     color: white;
     width:990px;

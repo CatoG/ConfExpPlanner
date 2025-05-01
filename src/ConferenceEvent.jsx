@@ -86,7 +86,7 @@ const getItemsFromTotalCost = () => {
         return <>
             <div className="display_box1">
                 {items.length === 0 && <p>No items selected</p>}
-                <table className="table_item_data" border="1">
+                <table className="table_item_data">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -99,7 +99,7 @@ const getItemsFromTotalCost = () => {
                         {items.map((item, index) => (
                             <tr key={index}>
                                 <td>{item.name}</td>
-                                <td>${item.cost}</td>
+                                <td>NOK {item.cost}</td>
                                 <td>
                                     {item.type === "meals" || item.numberOfPeople
                                     ? ` For ${numberOfPeople} people`
@@ -183,7 +183,7 @@ const mealsTotalCost = calculateTotalCost("meals");
                 <img src={item.img} alt={item.name} />
               </div>
               <div className="text">{item.name}</div>
-              <div>${item.cost}</div>
+              <div>NOK {item.cost}</div>
      <div className="button_container">
         {venueItems[index].name === "Auditorium Hall (Capacity:200)" ? (
 
@@ -229,7 +229,7 @@ const mealsTotalCost = calculateTotalCost("meals");
             </div>
           ))}
         </div>
-        <div className="total_cost">Total Cost: ${venueTotalCost}</div>
+        <div className="total_cost">Total Cost: NOK {venueTotalCost}</div>
       </div>
 
                             {/*Necessary Add-ons*/}
@@ -248,7 +248,7 @@ const mealsTotalCost = calculateTotalCost("meals");
             <img src={item.img} alt={item.name} />
         </div>
     <div className="text"> {item.name} </div>
-    <div> ${item.cost} </div>
+    <div> NOK {item.cost} </div>
         <div className="addons_btn">
             <button className="btn-warning" onClick={() => handleDecrementAvQuantity(index)}> &ndash; </button>
             <span className="quantity-value">{item.quantity}</span>
@@ -257,7 +257,7 @@ const mealsTotalCost = calculateTotalCost("meals");
     </div>
 ))}
                                 </div>
-<div className="total_cost">Total Cost: {avTotalCost}</div>
+<div className="total_cost">Total Cost: NOK {avTotalCost}</div>
                             </div>
 
                             {/* Meal Section */}
@@ -288,11 +288,11 @@ const mealsTotalCost = calculateTotalCost("meals");
                  />
                 <label htmlFor={`meal_${index}`}> {item.name} </label>
             </div>
-            <div className="meal_cost">${item.cost}</div>
+            <div className="meal_cost">NOK {item.cost}</div>
         </div>
     ))}
 </div>
-<div className="total_cost">Total Cost: {mealsTotalCost}</div>
+<div className="total_cost">Total Cost: NOK {mealsTotalCost}</div>
 
                             </div>
                         </div>
